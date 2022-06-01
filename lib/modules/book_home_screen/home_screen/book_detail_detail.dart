@@ -39,8 +39,8 @@ class _BookDetailState extends State<BookDetail> {
 
   @override
   Widget build(BuildContext context) {
-    // var num =
-    //     double.parse('${bookDetailController.bookDetailModel.value.rating}');
+    double rate =
+        double.parse('${bookDetailController.bookDetailModel.value.rating}');
     return Scaffold(
       body: SafeArea(
         child: Obx(
@@ -139,7 +139,7 @@ class _BookDetailState extends State<BookDetail> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         RatingBar(
-                          initialRating: 0,
+                          initialRating: rate,
                           // bookDetailController.bookDetailModel.value.rating,
                           direction: Axis.horizontal,
                           allowHalfRating: true,
