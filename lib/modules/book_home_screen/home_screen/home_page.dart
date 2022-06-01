@@ -55,12 +55,11 @@ class _HomePageState extends State<HomePage> {
                             key: _formKey,
                             child: TextFormField(
                               cursorColor: Colors.grey,
-                              textAlign: TextAlign.center,
+                              // textAlign: TextAlign.center,
                               decoration: InputDecoration(
                                 filled: true,
                                 fillColor: Colors.white,
-                                contentPadding:
-                                    const EdgeInsets.only(top: 0, bottom: 0),
+                                contentPadding: const EdgeInsets.only(left: 20),
                                 hintText: "Search 7 million books",
                                 focusedBorder: OutlineInputBorder(
                                   borderSide: const BorderSide(

@@ -11,6 +11,6 @@ Content-Type: application/json
 Accept: application/json
 
 ###Search
-GET https://api.itbook.store/1.0/search/hackjhu
+GET https://api.itbook.store/1.0/search/hack
 Content-Type: application/json
 Accept: application/json

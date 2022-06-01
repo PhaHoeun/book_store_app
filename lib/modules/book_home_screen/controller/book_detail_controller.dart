@@ -8,6 +8,8 @@ class BookDetailController extends GetxController {
   // var bookDetailList = <BookDetailModel>[].obs;
   var isLoading = false.obs;
 
+  final rating = 0.0.obs;
+
   Future<void> onFetchDataBookDetail(String? isbn13) async {
     isLoading(true);
     apiBaseHelper
@@ -15,6 +17,8 @@ class BookDetailController extends GetxController {
             url: 'books/$isbn13', methode: METHODE.get, isAuthorize: false)
         .then((response) {
       bookDetailModel.value = BookDetailModel.fromJson(response);
+
+      // rating(double.parse(bookDetailModel.value.rating!));
       isLoading(false);
     });
   }

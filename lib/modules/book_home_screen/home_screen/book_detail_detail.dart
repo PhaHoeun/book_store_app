@@ -34,13 +34,14 @@ class _BookDetailState extends State<BookDetail> {
   @override
   void initState() {
     bookDetailController.onFetchDataBookDetail(widget.isbn13);
+    
     super.initState();
   }
 
+
+
   @override
   Widget build(BuildContext context) {
-    double rate =
-        double.parse('${bookDetailController.bookDetailModel.value.rating}');
     return Scaffold(
       body: SafeArea(
         child: Obx(
@@ -139,8 +140,9 @@ class _BookDetailState extends State<BookDetail> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         RatingBar(
-                          initialRating: rate,
-                          // bookDetailController.bookDetailModel.value.rating,
+                          initialRating: 
+                          // bookDetailController.rating.value,
+                          double.parse(bookDetailController.bookDetailModel.value.rating??'0'),
                           direction: Axis.horizontal,
                           allowHalfRating: true,
                           itemCount: 5,
