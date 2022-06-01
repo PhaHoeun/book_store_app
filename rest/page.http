@@ -1,0 +1,16 @@
+
+
+###Get List
+GET https://api.itbook.store/1.0/new
+Content-Type: application/json
+Accept: application/json
+
+###Detail
+GET https://api.itbook.store/1.0/books/9781642002133
+Content-Type: application/json
+Accept: application/json
+
+###Search
+GET https://api.itbook.store/1.0/search/hackjhu
+Content-Type: application/json
+Accept: application/json
