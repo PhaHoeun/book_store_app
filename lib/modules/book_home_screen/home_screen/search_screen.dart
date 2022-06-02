@@ -1,6 +1,6 @@
 import 'package:book_store_app/modules/book_home_screen/controller/book_detail_controller.dart';
 import 'package:book_store_app/modules/book_home_screen/controller/search_controller.dart';
-import 'package:book_store_app/modules/book_home_screen/home_screen/book_detail_detail.dart';
+import 'package:book_store_app/modules/book_home_screen/home_screen/book_detail_page.dart';
 import 'package:book_store_app/utils/app_setting/app_color.dart';
 import 'package:book_store_app/widget/custom_card.dart';
 import 'package:flutter/material.dart';
