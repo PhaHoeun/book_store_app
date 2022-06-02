@@ -2,8 +2,8 @@ import 'package:book_store_app/modules/book_home_screen/controller/book_detail_c
 import 'package:book_store_app/utils/app_setting/app_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class BookDetail extends StatefulWidget {
   const BookDetail({
@@ -52,9 +52,14 @@ class _BookDetailState extends State<BookDetail> {
           padding: const EdgeInsets.only(left: 20, right: 20),
           child: Obx(
             () => bookDetailController.isLoading.value
-                ? Center(
-                    child: LoadingAnimationWidget.inkDrop(
-                        color: Colors.amber, size: 80),
+                ? const Center(
+                    child: SpinKitPumpingHeart(
+                      color: Colors.amber,
+                      size: 80,
+                      duration: Duration(microseconds: 1000),
+                    ),
+                    // LoadingAnimationWidget.inkDrop(
+                    //     color: Colors.amber, size: 80),
                   )
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.start,

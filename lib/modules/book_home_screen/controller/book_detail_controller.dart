@@ -19,7 +19,7 @@ class BookDetailController extends GetxController {
       bookDetailModel.value = BookDetailModel.fromJson(response);
 
       // rating(double.parse(bookDetailModel.value.rating!));
-      Future.delayed(const Duration(milliseconds: 1800), () {
+      Future.delayed(const Duration(milliseconds: 2500), () {
         isLoading(false);
       });
     });
