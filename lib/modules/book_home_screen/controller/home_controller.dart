@@ -23,7 +23,9 @@ class HomeController extends GetxController {
         // debugPrint("=====================3333");
         homeList.add((HomeModel.fromJson(e)));
       }).toList();
-      isLoading(false);
+      Future.delayed(const Duration(seconds: 3), () {
+        isLoading(false);
+      });
     });
     return homeList;
   }

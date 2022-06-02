@@ -6,6 +6,7 @@ import 'package:book_store_app/widget/custom_ads.dart';
 import 'package:book_store_app/widget/custom_card.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key? key}) : super(key: key);
@@ -30,7 +31,10 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: Obx(
         () => homeController.isLoading.value
-            ? const Center(child: CircularProgressIndicator())
+            ? Center(
+                child: LoadingAnimationWidget.threeArchedCircle(
+                    color: Colors.amber, size: 80),
+              )
             : SingleChildScrollView(
                 child: Column(
                   children: [
@@ -80,11 +84,13 @@ class _HomePageState extends State<HomePage> {
                                       _formKey.currentState!.save();
                                       Navigator.push(
                                         context,
-                                        MaterialPageRoute(builder: (context) {
-                                          return SearchScreen(
-                                              title:
-                                                  searchController.title.value);
-                                        }),
+                                        MaterialPageRoute(
+                                          builder: (context) {
+                                            return SearchScreen(
+                                                title: searchController
+                                                    .title.value);
+                                          },
+                                        ),
                                       );
                                     },
                                     child: const Icon(
