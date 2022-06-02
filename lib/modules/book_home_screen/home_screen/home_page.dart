@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                             key: _formKey,
                             child: TextFormField(
                               cursorColor: Colors.grey,
-                              // textAlign: TextAlign.center,
+                              textAlign: TextAlign.center,
                               decoration: InputDecoration(
                                 filled: true,
                                 fillColor: Colors.white,
@@ -74,7 +74,7 @@ class _HomePageState extends State<HomePage> {
                                   borderRadius: BorderRadius.circular(40),
                                 ),
                                 suffixIcon: Padding(
-                                  padding: const EdgeInsets.only(right: 30),
+                                  padding: const EdgeInsets.only(right: 20),
                                   child: GestureDetector(
                                     onTap: () {
                                       _formKey.currentState!.save();
