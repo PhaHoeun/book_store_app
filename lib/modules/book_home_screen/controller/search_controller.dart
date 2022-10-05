@@ -13,7 +13,7 @@ class SearchController extends GetxController {
 
   Future<List<HomeModel>> onFetchDataSearch(String? title) async {
     isLoading(true);
-    await apiBaseHelper
+    apiBaseHelper
         .onNetworkRequesting(
             url: 'search/$title', methode: METHODE.get, isAuthorize: false)
         .then((response) {

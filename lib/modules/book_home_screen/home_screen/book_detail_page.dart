@@ -53,10 +53,10 @@ class _BookDetailState extends State<BookDetail> {
           child: Obx(
             () => bookDetailController.isLoading.value
                 ? const Center(
-                    child: SpinKitPumpingHeart(
+                    child: SpinKitFadingCircle(
                       color: Colors.amber,
                       size: 80,
-                      duration: Duration(microseconds: 1000),
+                      duration: Duration(milliseconds: 1000),
                     ),
                     // LoadingAnimationWidget.inkDrop(
                     //     color: Colors.amber, size: 80),
@@ -75,12 +75,12 @@ class _BookDetailState extends State<BookDetail> {
                             onTap: () {
                               Navigator.pop(context);
                             },
-                            child: Container(
-                              alignment: Alignment.center,
-                              width: 50,
+                            child: const SizedBox(
+                              // alignment: Alignment.center,
+                              // width: 50,
                               height: 50,
-                              padding: const EdgeInsets.only(left: 10),
-                              child: const Icon(Icons.arrow_back_ios),
+                              // padding: const EdgeInsets.only(left: 10),
+                              child: Icon(Icons.arrow_back_ios),
                             ),
                           ),
                         ),
