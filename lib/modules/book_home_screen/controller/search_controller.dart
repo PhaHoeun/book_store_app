@@ -4,7 +4,7 @@ import 'package:book_store_app/utils/helper/api_base_helper.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class SearchController extends GetxController {
+class SearchsController extends GetxController {
   ApiBaseHelper apiBaseHelper = ApiBaseHelper();
   var searchModel = SearchModel().obs;
   var searchList = <HomeModel>[].obs;

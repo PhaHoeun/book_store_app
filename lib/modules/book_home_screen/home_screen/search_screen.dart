@@ -22,7 +22,7 @@ class SearchScreen extends StatefulWidget {
 }
 
 class _SearchScreenState extends State<SearchScreen> {
-  SearchController searchController = Get.put(SearchController());
+  var searchController = Get.put(SearchsController());
 
   BookDetailController bookDetailController = Get.put(BookDetailController());
   @override

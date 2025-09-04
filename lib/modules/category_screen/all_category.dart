@@ -17,7 +17,7 @@ class AllCategory extends StatefulWidget {
 
 class _AllCategoryState extends State<AllCategory> {
   HomeController homeController = Get.put(HomeController());
-  SearchController searchController = Get.put(SearchController());
+  var searchController = Get.put(SearchsController());
 
   @override
   void initState() {
