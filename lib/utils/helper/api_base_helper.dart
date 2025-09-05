@@ -1,6 +1,6 @@
 import 'dart:convert';
+import 'package:book_store_app/core/api_service.dart';
 import 'package:get/get_connect.dart';
-import 'package:global_configuration/global_configuration.dart';
 
 class ErrorModel {
   final int? statusCode;
@@ -23,16 +23,16 @@ class ApiBaseHelper extends GetConnect {
       Map<String, dynamic>? body,
       required METHODE? methode,
       required bool isAuthorize}) async {
-        final String? baseurl = await GlobalConfiguration().get('base_url'); 
-    final fullUrl = baseurl! + url;
-    Map<String, String> _header = {
+    final String baseurl = ApiService.baseUrl;
+    final fullUrl = baseurl + url;
+    Map<String, String> header = {
       'Content-Type': 'application/json',
       'Accept': 'application/json',
     };
     try {
       switch (methode) {
         case METHODE.get:
-          final response = await get(fullUrl, headers: header ?? _header);
+          final response = await get(fullUrl, headers: header);
           return _returnResponse(response);
         case METHODE.post:
           if (body != null) {

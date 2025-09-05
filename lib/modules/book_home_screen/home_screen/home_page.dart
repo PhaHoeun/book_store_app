@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -26,6 +26,8 @@ class _HomePageState extends State<HomePage> {
             backgroundColor: const Color.fromARGB(255, 3, 161, 182),
             toolbarHeight: 0,
             bottom: const TabBar(
+              indicatorColor: Colors.white,
+              labelColor: Colors.white,
               tabs: [
                 Tab(
                   child: Text(
